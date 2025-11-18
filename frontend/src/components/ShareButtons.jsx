@@ -1,0 +1,2 @@
+import React from 'react';
+export function ShareButtons({ url, title }){ function copy(){ navigator.clipboard?.writeText(url); alert('Link copied'); } return (<div className="flex gap-2"><button onClick={copy} className="px-2 py-1 bg-white/5 rounded">Copy</button><a className="px-2 py-1 bg-white/5 rounded" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`} target="_blank" rel="noreferrer">Tweet</a></div>); }

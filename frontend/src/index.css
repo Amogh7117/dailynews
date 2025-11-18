@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-darkBg2 text-slate-100 antialiased;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes dash {
+  from {
+    stroke-dasharray: 1, 300;
+    stroke-dashoffset: 50;
+  }
+  to {
+    stroke-dasharray: 300, 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .weather-inline {
+    width: 100% !important;
+  }
+}
+select option {
+  background-color: rgba(15, 27, 46, 0.95);
+  color: #fff;
+  padding: 8px;
+}
